@@ -11,6 +11,7 @@ export default defineConfig({
   base: '/imperiolatino-live/',
   plugins: [react()],
 });
+
   vite: {
     ssr: {
       external: [],
