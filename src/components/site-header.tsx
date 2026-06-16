@@ -9,6 +9,7 @@ import {
   Lock,
   LogOut,
   Swords,
+  Trophy,
 } from "lucide-react";
 import { toast } from "sonner";
 import { Button, buttonVariants } from "@/components/ui/button";
@@ -25,13 +26,19 @@ import {
 import { useClan } from "@/components/clan-provider";
 import { cn } from "@/lib/utils";
 
-export type HomeView = "ranking" | "evolucion" | "cazas" | "envivo";
+export type HomeView =
+  | "ranking"
+  | "evolucion"
+  | "cazas"
+  | "envivo"
+  | "estadisticas";
 
 const NAV: { key: HomeView; label: string; icon: typeof Crown }[] = [
   { key: "ranking", label: "Ranking", icon: Crown },
   { key: "evolucion", label: "Evolución", icon: BarChart3 },
   { key: "cazas", label: "Cazas Incompletas", icon: AlertTriangle },
   { key: "envivo", label: "En Vivo", icon: Radio },
+  { key: "estadisticas", label: "Estadísticas", icon: Trophy },
 ];
 
 export function SiteHeader({
