@@ -7,10 +7,16 @@ import { EvolutionView } from "@/components/evolution-view";
 import { CazasView } from "@/components/cazas-view";
 import { EnVivoView } from "@/components/envivo-view";
 import { AdminBanner } from "@/components/admin-banner";
+import { EstadisticasView } from "@/components/estadisticas-view";
 
 const searchSchema = z.object({
-  view: z.enum(["ranking", "evolucion", "cazas", "envivo"]).optional(),
-});
+view: z.enum([
+  "ranking",
+  "evolucion",
+  "cazas",
+  "envivo",
+  "estadisticas"
+]).optional(),
 
 export const Route = createFileRoute("/")({
   validateSearch: (s) => searchSchema.parse(s),
@@ -35,6 +41,7 @@ function Index() {
         {view === "evolucion" && <EvolutionView />}
         {view === "cazas" && <CazasView />}
         {view === "envivo" && <EnVivoView />}
+        {view === "estadisticas" && <EstadisticasView />}
       </main>
     </div>
   );
