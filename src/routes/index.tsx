@@ -10,13 +10,14 @@ import { AdminBanner } from "@/components/admin-banner";
 import { EstadisticasView } from "@/components/estadisticas-view";
 
 const searchSchema = z.object({
-view: z.enum([
-  "ranking",
-  "evolucion",
-  "cazas",
-  "envivo",
-  "estadisticas"
-]).optional(),
+  view: z.enum([
+    "ranking",
+    "evolucion",
+    "cazas",
+    "envivo",
+    "estadisticas"
+  ]).optional(),
+});
 
 export const Route = createFileRoute("/")({
   validateSearch: (s) => searchSchema.parse(s),
