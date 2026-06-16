@@ -86,7 +86,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Tracker de actividad del clan Imperio Latino para Heroes of History: ranking de caza, evolución, cazas incompletas y seguimiento en vivo.",
       },
       { name: "theme-color", content: "#0f1729" },
-      { property: "og:title", content: "Imperio Latino — Tracker de Caza" },
+      { property: "og:title", content: "Imperio Latino — Tracker de Caza | Heroes of History" },
       {
         property: "og:description",
         content:
@@ -94,6 +94,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Imperio Latino — Tracker de Caza | Heroes of History" },
+      { name: "description", content: "Real-Time Sync ensures all users see the latest data instantly across the application." },
+      { property: "og:description", content: "Real-Time Sync ensures all users see the latest data instantly across the application." },
+      { name: "twitter:description", content: "Real-Time Sync ensures all users see the latest data instantly across the application." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9598b489-6f33-4361-bc00-7faa1ff26d0d/id-preview-56585d67--18bcd622-3f4c-4272-82b3-148b06627f88.lovable.app-1781599653280.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9598b489-6f33-4361-bc00-7faa1ff26d0d/id-preview-56585d67--18bcd622-3f4c-4272-82b3-148b06627f88.lovable.app-1781599653280.png" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
   }),
